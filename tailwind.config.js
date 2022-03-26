@@ -7,6 +7,7 @@ module.exports = {
         yellow: '#dbcd5c',
         white: '#eeeeec',
         red: '#bd1313',
+        hoverGreen: '#274e2a',
       },
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
