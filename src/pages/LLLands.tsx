@@ -1,4 +1,6 @@
-// import Layout from '../layout/LandlordLayout'
+import SideBar from "../layout/Landlord/SideBar"
+import TopBar from "../layout/Landlord/TopBar"
+
 import {
   MapContainer,
   TileLayer,
@@ -59,6 +61,16 @@ const LandLoard = () => {
   console.log(store.mine)
 
   return (
+    <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
+            <SideBar/>            
+            <div className="flex-1 flex flex-col">
+            <TopBar/>
+            <header aria-label="page caption" className="flex-none flex h-16 bg-gray-100 border-t px-4 items-center">
+            <h1 id="page-caption" className="text-lg">
+              Properties View
+            </h1>
+            </header>
+            <main className="min-h-0 border-t"></main>
     <div className="w-full h-screen">
       <MapContainer
         center={[36.833251, 10.1461659]}
@@ -72,6 +84,9 @@ const LandLoard = () => {
         <CheckPosition />
       </MapContainer>
     </div>
+    </div>
+    </div>
+    
   )
 }
 

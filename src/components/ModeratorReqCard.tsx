@@ -14,10 +14,10 @@ const ModCard = ({ ...props }) => {
       </div>
       <br />
       <div className="flex gap-2 justify-end">
-        <button className="bg-green hover:bg-hoverGreen  text-white font-bold py-2 px-5 rounded flex items-center justify-center">
+        <button className="bg-green hover:bg-hoverGreen  text-white font-bold py-2 px-5 rounded-sm flex items-center justify-center">
           <Done Width="17" /> &nbsp; Accept
         </button>
-        <button className="bg-transparent  text-red font-semibold  py-2 px-5 border border-red  rounded flex items-center justify-center">
+        <button className="bg-transparent  text-red font-semibold  py-2 px-5 border border-red  rounded-sm flex items-center justify-center">
           <X Width="17" St="fill-red " /> &nbsp; Cancel
         </button>
       </div>
