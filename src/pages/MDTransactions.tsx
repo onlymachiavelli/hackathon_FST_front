@@ -13,11 +13,11 @@ const MDTransactions = () => {
           className="flex-none flex h-16 bg-gray-100 border-t px-4 items-center"
         >
           <h1 id="page-caption" className="text-lg">
-            Hello Mod.
+            Transactions Log
           </h1>
         </header>
-        <main className=" min-h-0 border-t  pt-7">
-          <div className="grid gap-2 grid-cols-2 px-10 place-items-center ">
+        <main className=" min-h-0 border-t grid grid-cols-2 pt-12 place-items-center">
+          <div className="w-full grid gap-y-2 px-10 place-items-center ">
             <TransactionCard
               fullname={'Only Machiavelli'}
               amount={69.42}
