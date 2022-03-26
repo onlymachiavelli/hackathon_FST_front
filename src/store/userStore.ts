@@ -9,9 +9,11 @@ type UserStore = {
     loading: boolean
   }
   signup: {
+    error: string | null
     loading: boolean
   }
   launchLogin: (username: string, password: string, cb: Function) => void
+  launchSignup: (data: any, cb: Function) => void
   getMe: () => void
 }
 
@@ -23,6 +25,7 @@ export const useUser = store<UserStore>(set => ({
     loading: false,
   },
   signup: {
+    error: null,
     loading: false,
   },
   loadToken: () => {
@@ -30,18 +33,31 @@ export const useUser = store<UserStore>(set => ({
       isAuthenticated: !!localStorage.getItem('token'),
     })
   },
-  launchSignup: async (data: any) => {
-    await set({
-      signup: {
-        loading: true,
-      },
-    })
-    await services.register(data)
-    await set({
-      signup: {
-        loading: false,
-      },
-    })
+  launchSignup: async (data, cb) => {
+    try {
+      await set({
+        signup: {
+          error: null,
+          loading: true,
+        },
+      })
+      await services.register(data)
+
+      await set({
+        signup: {
+          error: null,
+          loading: false,
+        },
+      })
+      cb()
+    } catch {
+      await set({
+        signup: {
+          error: 'Something went wrong',
+          loading: false,
+        },
+      })
+    }
   },
   launchLogin: async (username, password, cb) => {
     await set({
