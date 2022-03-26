@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 const Form = () => {
   return (
     <form className="w-full">
-        
       <div className="mb-6">
         <label className="block mb-2 text-sm font-medium text-gray-900 ">
           Your Full Name
@@ -58,7 +57,7 @@ const Form = () => {
 
       <button
         type="submit"
-        className="text-white bg-green   font-medium rounded-sm text-sm px-5 py-2.5 text-center "
+        className="text-white bg-green hover:bg-hoverGreen   font-medium rounded-sm text-sm px-5 py-2.5 text-center "
       >
         Register new account
       </button>

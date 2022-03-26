@@ -1,7 +1,10 @@
 import TopBar from "../layout/TopBar"
 import SideBar from "../layout/SideBar"
 import "../buttons.css"
+import Modal from "../layout/Modal/index"
+import { useState } from "react"
 const MDUsers = () => {
+  const [show, setShow] = useState(false)
   return (
     <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
             <SideBar/>            
@@ -10,7 +13,7 @@ const MDUsers = () => {
             <header aria-label="page caption" className="flex-none flex h-16 bg-gray-100 border-t px-4 items-center">
             <h1 id="page-caption" className="text-lg">Tenants View</h1>
             <div className='mr-5 ml-auto'>
-            <button className="button primary new"><span className='font-sans'>New Tenant</span></button>
+            <button onClick={() => setShow(true)} className="button primary new"><span className='font-sans'>New Tenant</span></button>
             </div>
             </header>
             <main className="min-h-0 border-t">
@@ -74,6 +77,123 @@ const MDUsers = () => {
             </main>
 
             </div>
+            <Modal title="New Tenant" onClose={() => setShow(false)} show={show}>
+        <p><div className="w-full  ">
+      <form>
+        <div className="mb-3">
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">
+            Tenant's ID Number
+          </label>
+          <input
+            type="number"
+            id="id"
+            className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            placeholder="12345678"
+            maxLength={8}
+            minLength={8}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">
+            Tenant's Apartment
+          </label>
+          <input
+            type="number"
+            id="apt"
+            className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            placeholder="123"
+            maxLength={3}
+            minLength={3}
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">
+            Tenant's Given Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            placeholder="John Doe"
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">
+            Tenant's Phone Number
+          </label>
+          <input
+            type="number"
+            id="phone"
+            className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            placeholder="12345678"
+            maxLength={8}
+            minLength={8}
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">
+            Tenant's Email Address
+          </label>
+          <input
+            type="email"
+            id="email"
+            className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            placeholder="johndoe@domain.com"
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">
+            Tenant's Handle
+          </label>
+          <input
+            type="text"
+            id="handle"
+            className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            placeholder="john_doe"
+            required
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="block mb-2 text-sm font-medium text-gray-900 ">
+            Rent Cost(TND)
+          </label>
+          <input
+            type="number"
+            id="id"
+            className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            placeholder="123"
+            required
+          />
+        </div>   
+        
+        <button
+          type="submit"
+          className="text-white bg-green hover:bg-hoverGreen focus:ring-4 focus:outline-none  font-medium rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+        >
+          Submit
+        </button>
+        &nbsp;
+        <button
+        onClick={()=>setShow(false)}
+          type="reset"
+          className="text-white bg-red hover:bg-hoverGreen focus:ring-4 focus:outline-none  font-medium rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+        >
+          Cancel
+        </button>
+
+      </form>
+    </div></p>
+      </Modal>
             </div>
   )
 

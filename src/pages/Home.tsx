@@ -1,12 +1,9 @@
-import TransacitonCard from './../components/TransactionCard'
+import ModCard from '../components/ModeratorReqCard'
+
 const Home = () => {
   return (
     <div>
-      <TransacitonCard
-        fullname={'Only Machiavelli'}
-        amount={69.42}
-        date={'12/12/2022'}
-      />
+      <ModCard fullname="Mr Machiavelli" land="Shit" />
     </div>
   )
 }
