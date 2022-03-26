@@ -9,14 +9,14 @@ const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => {
         <Link to="/">Moderator Requests</Link>
       </aside>
       <main className="col-span-4">
-        <nav className="flex items-center justify-end w-full p-4">
+        <nav className="flex items-center justify-between w-full p-4">
           <h1>Hello, John Doe (Landlord)</h1>
-          <button className="bg-red-500 px-4 py-2 rounded text-white">
+          <button className="bg-red px-4 py-2 rounded text-[white]">
             Logout
           </button>
         </nav>
 
-        <section className="p-10">{children}</section>
+        <section className="px-20">{children}</section>
       </main>
     </div>
   )
