@@ -11,7 +11,7 @@ const MDRents = () => {
             <div className="flex-1 flex flex-col">
             <TopBar/>
             <header aria-label="page caption" className="flex-none flex h-16 bg-gray-100 border-t px-4 items-center">
-            <h1 id="page-caption" className="text-lg">Tenants Status (Current Month)</h1>
+            <h1 id="page-caption" className="text-lg">Manage Rents (Current Month)</h1>
             <div className='mr-5 ml-auto'>
             </div>
             </header>
@@ -33,10 +33,10 @@ const MDRents = () => {
               Phone Number
             </th>
             <th scope="col" className="px-6 py-3">
-              Email
+              Rent Cost
             </th>
             <th scope="col" className="px-6 py-3">
-              Rent Cost
+              Preferred Payment Method
             </th>
             <th scope="col" className="px-6 py-3">
               Payment ID
@@ -56,17 +56,28 @@ const MDRents = () => {
             <td className="px-6 py-4">23</td>
             <td className="px-6 py-4">James McGill</td>
             <td className="px-6 py-4">92911404</td>
-            <td className="px-6 py-4"><a href='mailto:'><abbr title="jamesmcgill@gmail.com">Email</abbr></a></td>
-            <td className="px-6 py-4"><i>jamesmcgill</i></td>
-            <td className="px-6 py-4">520.00 TND</td>
+            <td className="px-6 py-4"><i>520.00 TND</i></td>
+            <td className="px-6 py-4">Hand to hand</td>
+            <td className="px-6 py-4">N/A</td>
+
 
 
             <td className="px-9 py-4 text-right ">
-            <button className="button inlineIcon activate"></button>
-
-            <button className="button inlineIcon edit"></button>
-
-              <button className="button inlineIcon delete"></button>
+            <button
+          className="text-white bg-green hover:bg-hoverGreen focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+        >
+          Mark as paid
+        </button>&nbsp;
+        <button
+          className="text-black bg-yellow hover:bg-hoverYellow focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+        >
+         Warn 
+        </button>&nbsp;
+        <button
+          className="text-white bg-red hover:bg-hoverRed focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+        >
+          Suspend
+        </button>
 
             </td>
           </tr>

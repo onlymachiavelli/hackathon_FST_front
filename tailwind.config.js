@@ -8,6 +8,8 @@ module.exports = {
         white: '#eeeeec',
         red: '#bd1313',
         hoverGreen: '#274e2a',
+        hoverRed: '#7c1e18',
+        hoverYellow: '#cbc073'        
       },
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
