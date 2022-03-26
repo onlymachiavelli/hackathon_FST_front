@@ -1,5 +1,5 @@
-import TopBar from "../layout/TopBar"
-import SideBar from "../layout/SideBar"
+import TopBar from "../layout/Moderator/TopBar"
+import SideBar from "../layout/Moderator/SideBar"
 import "../buttons.css"
 import Modal from "../layout/Modal/index"
 import { useState } from "react"
@@ -13,6 +13,7 @@ const MDUsers = () => {
             <header aria-label="page caption" className="flex-none flex h-16 bg-gray-100 border-t px-4 items-center">
             <h1 id="page-caption" className="text-lg">Tenants View</h1>
             <div className='mr-5 ml-auto'>
+            <button className="button primary new"><span className='font-sans'>Import Tenants (CSV)</span></button>&nbsp;
             <button onClick={() => setShow(true)} className="button primary new"><span className='font-sans'>New Tenant</span></button>
             </div>
             </header>

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { useUser } from '../store'
+import { useUser } from '../../store'
 const SideBar = () => {
   const store = useUser()
 
@@ -17,7 +17,7 @@ const SideBar = () => {
         <li>
           <NavLink
             title="Homepage"
-            to="/md/"
+            to="/ll/"
             className={({ isActive }) => {
               return `h-16 px-6 flex items-center text-white w-full ${
                 isActive ? 'bg-green' : ''
@@ -39,8 +39,8 @@ const SideBar = () => {
         </li>
         <li>
           <NavLink
-            title="Tenants"
-            to="/md/users"
+            title="Moderators"
+            to="/ll/moderators"
             className={({ isActive }) => {
               return `h-16 px-6 flex items-center text-white w-full ${
                 isActive ? 'bg-green' : ''
@@ -62,8 +62,8 @@ const SideBar = () => {
         </li>
         <li>
           <NavLink
-            title="Transactions"
-            to="/md/transactions"
+            title="Lands"
+            to="/ll/lands"
             className={({ isActive }) => {
               return `h-16 px-6 flex items-center text-white w-full ${
                 isActive ? 'bg-green' : ''
@@ -85,8 +85,8 @@ const SideBar = () => {
         </li>
         <li>
           <NavLink
-            title="Settings"
-            to="/md/passdue"
+            title="Requests"
+            to="/ll/requests"
             className={({ isActive }) => {
               return `h-16 px-6 flex items-center text-white w-full ${
                 isActive ? 'bg-green' : ''
