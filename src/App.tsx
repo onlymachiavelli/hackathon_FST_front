@@ -15,7 +15,7 @@ import MDPassDue from './pages/MDPassDue'
 import UsersProfile from './pages/UsersProfile'
 import { useUser } from './store'
 import { useEffect } from 'react'
-
+import 'leaflet/dist/leaflet.css'
 import Protected from './components/Protected'
 
 const App = () => {
