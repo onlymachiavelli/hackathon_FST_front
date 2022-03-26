@@ -3,7 +3,7 @@ import Signup from './pages/signup'
 import Signin from './pages/login'
 import Home from './pages/home'
 import LandLoard from './pages/Lands'
-import Dashboard from './pages/dashboard'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
