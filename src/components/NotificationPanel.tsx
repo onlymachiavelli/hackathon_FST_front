@@ -1,4 +1,4 @@
-import Card from "../layout/Card"
+import Card from '../layout/Card'
 
 const NotificationPanel = ({ children, ...props }: any) =>{
     return (
@@ -14,6 +14,5 @@ const NotificationPanel = ({ children, ...props }: any) =>{
         </section>
     )
 }
-
 
 export default NotificationPanel
