@@ -46,7 +46,7 @@ export const Right = () => {
           />
         </div>
         <div className="flex items-start mb-6">
-          <div className="ml-3 text-sm text-red-500">{store.login.error}</div>
+          <div className="ml-3 text-sm text-red">{store.login.error}</div>
         </div>
         <button
           type="submit"

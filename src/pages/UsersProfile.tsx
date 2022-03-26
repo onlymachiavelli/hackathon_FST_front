@@ -1,4 +1,4 @@
-import TopBar from '../layout/TopBar'
+import TopBar from '../layout/Moderator/TopBar'
 import { Money, Feed, Send } from '../components/svg'
 import TransacitonCard from '../components/TransactionCard'
 const Transactions = () => {

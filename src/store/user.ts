@@ -3,7 +3,8 @@ import * as services from './services'
 
 type UserStore = {
   user: any | null
-  isAuthenticated: boolean
+  loading: boolean
+  isAuthenticated: boolean | null
   login: {
     error: string | null
     loading: boolean
@@ -18,8 +19,9 @@ type UserStore = {
 }
 
 export const useUser = store<UserStore>(set => ({
-  isAuthenticated: false,
+  isAuthenticated: null,
   user: null,
+  loading: false,
   login: {
     error: null,
     loading: false,
@@ -104,20 +106,28 @@ export const useUser = store<UserStore>(set => ({
   },
   getMe: async () => {
     try {
+      set({
+        loading: true,
+        isAuthenticated: null,
+        user: null,
+      })
       const user = await services.getMe()
       if (!user) {
         set({
+          loading: false,
           isAuthenticated: false,
           user: null,
         })
       } else {
         set({
+          loading: false,
           isAuthenticated: true,
           user,
         })
       }
     } catch {
       set({
+        loading: false,
         isAuthenticated: false,
         user: null,
       })
