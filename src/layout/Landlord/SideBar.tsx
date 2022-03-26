@@ -62,8 +62,8 @@ const SideBar = () => {
         </li>
         <li>
           <NavLink
-            title="Lands"
-            to="/ll/lands"
+            title="Properties"
+            to="/ll/properties"
             className={({ isActive }) => {
               return `h-16 px-6 flex items-center text-white w-full ${
                 isActive ? 'bg-green' : ''
