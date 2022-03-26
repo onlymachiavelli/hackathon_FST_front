@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const Right = () =>{
     return (
         <div className="w-full  ">
@@ -16,6 +18,9 @@ export const Right = () =>{
             </div>
         </div>
         <button type="submit" className="text-white bg-green  focus:ring-4 focus:outline-none  font-medium rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  " >Submit</button>
+            <br/>
+            <br/>
+            <Link to="/signup">You don't have an account ? </Link>
         </form>
         </div>
     )
