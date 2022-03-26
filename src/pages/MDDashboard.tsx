@@ -17,7 +17,7 @@ const MDDashboard = () => {
             </h1>
             </header>
             <main className="flex-grow flex min-h-0 border-t">
-                <NotificationPanel>
+                <NotificationPanel title="Reclaims">
                     <Card title="Issue with my bath tub" body="I need a plomber this afternoon" footer="Apartment 45"/>
                     <Card title="Issue with my bath tub" body="I need a plomber this afternoon" footer="Apartment 45"/>
                     <Card title="Issue with my bath tub" body="I need a plomber this afternoon" footer="Apartment 45"/>

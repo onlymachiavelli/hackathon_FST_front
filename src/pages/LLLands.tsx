@@ -1,5 +1,7 @@
 import SideBar from "../layout/Landlord/SideBar"
 import TopBar from "../layout/Landlord/TopBar"
+import NotificationPanel from "../components/NotificationPanel"
+import Card from "../layout/Card"
 
 import {
   MapContainer,
@@ -70,7 +72,11 @@ const LandLoard = () => {
               Properties View
             </h1>
             </header>
-            <main className="min-h-0 border-t"></main>
+            <main className="flex-grow flex min-h-0 border-t">
+            <NotificationPanel title="Properties">
+                    <Card title="Issue with my bath tub" body="I need a plomber this afternoon" footer="Appartment 45"/>
+                    
+                </NotificationPanel>
     <div className="w-full h-screen">
       <MapContainer
         center={[36.833251, 10.1461659]}
@@ -84,9 +90,10 @@ const LandLoard = () => {
         <CheckPosition />
       </MapContainer>
     </div>
+    </main>
     </div>
     </div>
-    
+
   )
 }
 

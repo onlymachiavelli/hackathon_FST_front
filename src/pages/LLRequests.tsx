@@ -20,7 +20,7 @@ const LandLoard = () => {
             <main className="pt-12 min-h-0 border-t">
              
             <div className="w-full grid grid-cols-1 place-items-center">
-        <div className="gap-2 grid ">
+        <div className="gap-2 grid grid-cols-2 ">
           <ModCard fullname="Mr Machiavelli" land="Github" />
           <ModCard fullname="Mr Nie-Mand" land="Google" />
         </div>
