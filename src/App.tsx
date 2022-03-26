@@ -17,7 +17,8 @@ import { useUser } from './store'
 import { useEffect } from 'react'
 import 'leaflet/dist/leaflet.css'
 import Protected from './components/Protected'
-
+import AvailableLands from './pages/AvailableLands'
+import AvailableRents from './pages/AvailableRents'
 const App = () => {
   const store = useUser()
 
@@ -50,6 +51,9 @@ const App = () => {
         <Route path="/md/users" element={<MDUsers />} />
         <Route path="/md/passdue" element={<MDPassDue />} />
         <Route path="/me" element={<UsersProfile />} />
+
+        <Route path="/lands" element={<AvailableLands />} />
+        <Route path="/rents" element={<AvailableRents />} />
       </Routes>
     </BrowserRouter>
   )
