@@ -1,0 +1,149 @@
+
+.button {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  color: #FFF;
+  padding-right: 10px;
+
+}
+
+.primary {
+  line-height: 40px;
+  transition: ease-in-out 0.2s;
+  padding: 0 16px;
+}
+
+
+
+/* 2nd alternate hover colors if hover inset shadow not working properly 
+.edit:hover {
+  background: darken($gw-blue, 10%);
+}
+
+.save:hover {
+  background: darken($gw-purple, 10%);
+}
+
+.new:hover {
+  background: darken($gw-green, 10%);
+}
+
+.cancel:hover {
+  background: darken($gw-gray-5, 10%);
+}
+
+.delete:hover {
+  background: darken($gw-red, 10%);
+}
+*/
+.condensed {
+  transition: ease-in-out 0.2s;
+  line-height: 24px;
+  padding: 0 8px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.touch {
+  transition: ease-in-out 0.2s;
+  line-height: 40px;
+  width: 40px;
+  padding: 0px;
+  text-align: center;
+}
+
+.edit:before, .save:before, .activate:before, .new:before, .cancel:before, .delete:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 1rem;
+  padding-right: 12px;
+  background: none;
+  color: #FFF;
+}
+
+.condensed.edit:before, .condensed.save:before, .condensed.new:before, .condensed.cancel:before, .condensed.delete:before {
+  content: none;
+}
+
+.touch.edit:before, .touch.save:before, .touch.new:before, .touch.cancel:before, .touch.delete:before {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.inlineIcon.edit, .inlineIcon.save, .inlineIcon.new, .inlineIcon.cancel, .inlineIcon.delete, .inlineIcon.activate {
+  background: transparent;
+}
+
+.inlineIcon.edit:before, .inlineIcon.save:before, .inlineIcon.new:before, .inlineIcon.activate:before, .inlineIcon.cancel:before, .inlineIcon.delete:before {
+  line-height: 18px;
+  font-size: 18px;
+  padding: 4px 0px;
+}
+
+.edit {
+  background: #3498db;
+}
+.edit:before {
+  content: "";
+}
+
+.inlineIcon.edit:before {
+  color: #3498db;
+}
+
+.save {
+  background: #8e44ad;
+}
+.save:before {
+  content: "";
+}
+
+.inlineIcon.save:before {
+  color: #8e44ad;
+}
+
+.new {
+  background: #2ecc71;
+}
+.new:before {
+  content: "";
+}
+
+.inlineIcon.new:before {
+  color: #2ecc71;
+}
+
+.cancel {
+  background: #555555;
+}
+.cancel:before {
+  content: "";
+}
+
+.inlineIcon.cancel:before {
+  color: #555555;
+}
+
+.delete {
+  background: #c0392b;
+}
+.delete:before {
+  content: "";
+}
+
+.inlineIcon.delete:before {
+  color: #c0392b;
+}
+
+.activate {
+  background: #5d9612;
+}
+.activate:before {
+  content: "";
+}
+
+.inlineIcon.activate:before {
+  color: #5d9612;
+}

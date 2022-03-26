@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 
 const SideBar = () =>{
     return (
-  <nav aria-label="side bar" aria-orientation="vertical" className="flex-none flex flex-col items-center text-center bg-green text-gray-400 border-r">
+  <nav aria-label="side bar" aria-orientation="vertical" className="flex-none flex flex-col items-center text-center bg-black text-gray-400 border-r">
     <div className="h-16 flex items-center w-full">
       <img className="h-auto w-8 mx-auto" src="/public/assets/logo.png" />
     </div>
@@ -10,7 +10,7 @@ const SideBar = () =>{
     <ul>
       <li>
         <NavLink title="Homepage" to="/md/" className={( {isActive} ) => {          
-          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-yellow' : ''}` } 
+          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-green' : ''}` } 
         }
         >
           <i className="mx-auto">
@@ -22,7 +22,7 @@ const SideBar = () =>{
       </li>
       <li>
       <NavLink title="Tenants" to="/md/users" className={( {isActive} ) => {          
-          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-yellow' : ''}` } 
+          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-green' : ''}` } 
         }
         >
           <i className="mx-auto">
@@ -34,7 +34,7 @@ const SideBar = () =>{
       </li>
       <li>
       <NavLink title="Transactions" to="/md/transactions" className={( {isActive} ) => {          
-          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-yellow' : ''}` } 
+          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-green' : ''}` } 
         }
         >
           <i className="mx-auto">
@@ -46,7 +46,7 @@ const SideBar = () =>{
       </li>
       <li>
       <NavLink title="Settings" to="/md/passdue" className={( {isActive} ) => {          
-          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-yellow' : ''}` } 
+          return `h-16 px-6 flex items-center text-white w-full ${isActive ? 'bg-green' : ''}` } 
         }
         >          <i className="mx-auto">
             <svg className="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
