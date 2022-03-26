@@ -5,7 +5,9 @@ module.exports = {
       colors: {
         green: '#38743d',
       },
-      fontFamily: {},
+      fontFamily: {
+        sans: ['Work Sans', 'sans-serif'],
+      },
       backgroundImage: {},
     },
   },
