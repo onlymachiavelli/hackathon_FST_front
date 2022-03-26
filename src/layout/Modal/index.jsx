@@ -1,21 +1,21 @@
-import React, { useEffect } from "react";
-import ReactDOM from "react-dom";
-import { CSSTransition } from "react-transition-group";
-import "./Modal.css";
+import React, { useEffect } from 'react'
+import ReactDOM from 'react-dom'
+import { CSSTransition } from 'react-transition-group'
+import './Modal.css'
 
 const Modal = props => {
   const closeOnEscapeKeyDown = e => {
     if ((e.charCode || e.keyCode) === 27) {
-      props.onClose();
+      props.onClose()
     }
-  };
+  }
 
   useEffect(() => {
-    document.body.addEventListener("keydown", closeOnEscapeKeyDown);
+    document.body.addEventListener('keydown', closeOnEscapeKeyDown)
     return function cleanup() {
-      document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
-    };
-  }, []);
+      document.body.removeEventListener('keydown', closeOnEscapeKeyDown)
+    }
+  }, [])
 
   return ReactDOM.createPortal(
     <CSSTransition
@@ -37,8 +37,8 @@ const Modal = props => {
         </div>
       </div>
     </CSSTransition>,
-    document.getElementById("root")
-  );
-};
+    document.getElementById('root')
+  )
+}
 
-export default Modal;
+export default Modal
