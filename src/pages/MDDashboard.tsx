@@ -1,8 +1,8 @@
-import Card from "../layout/Card"
-import NotificationPanel from "../components/NotificationPanel"
-import TopBar from "../layout/TopBar"
-import SideBar from "../layout/SideBar"
-import Stats from "../components/Stats"
+import Card from '../layout/Card'
+import NotificationPanel from '../components/NotificationPanel'
+import TopBar from '../layout/TopBar'
+import SideBar from '../layout/SideBar'
+import Stats from '../components/Stats'
 const MDDashboard = () => {
   return (
     <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
@@ -27,7 +27,6 @@ const MDDashboard = () => {
             </div>
             </div>
   )
-
 }
 
 export default MDDashboard

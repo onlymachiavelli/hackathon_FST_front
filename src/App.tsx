@@ -13,8 +13,16 @@ import MDTransactions from './pages/MDTransactions'
 import MDUsers from './pages/MDUsers'
 import MDPassDue from './pages/MDPassDue'
 import UsersProfile from './pages/UsersProfile'
+import { useUser } from './store'
+import { useEffect } from 'react'
 
 const App = () => {
+  const store = useUser()
+
+  useEffect(() => {
+    store.getMe()
+  }, [])
+
   return (
     <BrowserRouter>
       <Routes>
