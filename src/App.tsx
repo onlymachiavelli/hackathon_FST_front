@@ -39,9 +39,9 @@ const App = () => {
         <Route
           path="/md"
           element={
-            <Protected role="MODERATOR">
+           // <Protected role="MODERATOR">
               <MDDashboard />
-            </Protected>
+           // </Protected>
           }
         />
         <Route path="/md/feedback" element={<MDFeedback />} />
