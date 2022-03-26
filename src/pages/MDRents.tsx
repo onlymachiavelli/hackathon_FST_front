@@ -1,6 +1,7 @@
 import TopBar from '../layout/Moderator/TopBar'
 import SideBar from '../layout/Moderator/SideBar'
 import '../buttons.css'
+// @ts-ignore
 import Modal from '../layout/Modal/index'
 import { useState } from 'react'
 const MDRents = () => {
