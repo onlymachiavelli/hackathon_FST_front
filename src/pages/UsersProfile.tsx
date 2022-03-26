@@ -6,14 +6,14 @@ const Transactions = () => {
     <div>
       <TopBar />
 
-      <div className="w-full flex items-center justify-center">
-        <div className="bg-[white] w-3/4">
+      <div className="w-full flex items-center justify-center ">
+        <div className="bg-[white] w-3/4 ">
           <br />
           <p className="text-center text-gray-900 font-bold text-2xl">
             PAYEMENT BUTTONS
           </p>
           <div className="w-full flex items-center justify-center pt-4">
-            <div className=" grid place-content-center  bg-white px-5 py-9  rounded">
+            <div className=" grid place-content-center  bg-[white] px-5 py-9  rounded">
               <div className="flex items-center justify-center gap-1">
                 <button className="bg-green hover:bg-hoverGreen  text-white font-bold py-3 px-7 rounded flex items-center justify-center">
                   <Money Width="20" color="white" /> &nbsp; PAY X
@@ -28,10 +28,10 @@ const Transactions = () => {
             </div>
           </div>
 
-          <p className="text-center text-gray-900 font-bold text-2xl pt-4">
+          <p className="text-center text-gray-900 font-bold text-2xl pt-10">
             TRANSACTIONS SECTION
           </p>
-          <div className="grid grid-cols-2 gap-2 px-10 place-items-center py-4">
+          <div className="grid grid-cols-2 w-full gap-2  place-items-center py-4">
             <TransacitonCard
               fullname={'Only Machiavelli'}
               amount={69.42}
@@ -69,7 +69,7 @@ const Transactions = () => {
           </div>
 
           <div className="w-full flex items-center justify-center pt-4">
-            <div className="bg-[white] h-auto w-3/4 p-7 rounded-md  border ">
+            <div className="bg-[white] h-auto w-full p-7 rounded-md  border ">
               <div className="w-full flex items-center justify-center">
                 <Feed Width="50" St="fill-red" />
               </div>
