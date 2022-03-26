@@ -6,13 +6,13 @@ const Transactions = () => {
     <div>
       <TopBar />
 
-      <div className="bg-white">
+      <div className="bg-[white]">
         <br />
         <p className="text-center text-gray-900 font-bold text-2xl">
           PAYEMENT BUTTONS
         </p>
         <div className="w-full flex items-center justify-center pt-4">
-          <div className=" grid place-content-center  bg-[white] px-5 py-9  rounded">
+          <div className=" grid place-content-center  bg-white px-5 py-9  rounded">
             <div className="flex items-center justify-center gap-1">
               <button className="bg-green hover:bg-hoverGreen  text-white font-bold py-3 px-7 rounded flex items-center justify-center">
                 <Money Width="20" color="white" /> &nbsp; PAY X
