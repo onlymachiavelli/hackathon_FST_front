@@ -105,14 +105,14 @@
 }
 
 .new {
-  background: #2ecc71;
+  background: #38743d;
 }
 .new:before {
   content: "";
 }
 
 .inlineIcon.new:before {
-  color: #2ecc71;
+  color: #38743d;
 }
 
 .cancel {
