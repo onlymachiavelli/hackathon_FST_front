@@ -16,8 +16,8 @@ const MDTransactions = () => {
             Hello Mod.
           </h1>
         </header>
-        <main className=" min-h-0 border-t grid grid-cols-2 pt-7">
-          <div className="grid gap-y-2 px-10 place-items-center ">
+        <main className=" min-h-0 border-t  pt-7">
+          <div className="grid gap-2 grid-cols-2 px-10 place-items-center ">
             <TransactionCard
               fullname={'Only Machiavelli'}
               amount={69.42}
@@ -30,6 +30,39 @@ const MDTransactions = () => {
               date={'12/12/2022'}
             />
 
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
             <TransactionCard
               fullname={'Only Machiavelli'}
               amount={69.42}
@@ -42,7 +75,6 @@ const MDTransactions = () => {
               date={'12/12/2022'}
             />
           </div>
-          <div></div>
         </main>
       </div>
     </div>
