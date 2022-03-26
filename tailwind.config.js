@@ -7,7 +7,9 @@ module.exports = {
         yellow: '#dbcd5c',
         white: '#eeeeec'
       },
-      fontFamily: {},
+      fontFamily: {
+        sans: ['Work Sans', 'sans-serif'],
+      },
       backgroundImage: {},
     },
   },
