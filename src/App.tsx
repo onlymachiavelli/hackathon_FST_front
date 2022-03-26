@@ -13,7 +13,6 @@ import MDTransactions from './pages/MDTransactions'
 import MDUsers from './pages/MDUsers'
 import MDPassDue from './pages/MDPassDue'
 import UsersProfile from './pages/UsersProfile'
-import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (
@@ -30,11 +29,10 @@ const App = () => {
         <Route path="/md" element={<MDDashboard />} />
         <Route path="/md/feedback" element={<MDFeedback />} />
         <Route path="/md/rents" element={<MDRents />} />
-        <Route path="/md/tx" element={<MDTransactions />} />
+        <Route path="/md/transactions" element={<MDTransactions />} />
         <Route path="/md/users" element={<MDUsers />} />
         <Route path="/md/passdue" element={<MDPassDue />} />
         <Route path="/me" element={<UsersProfile />} />
-        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   )
