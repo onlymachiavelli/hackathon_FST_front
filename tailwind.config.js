@@ -4,6 +4,8 @@ module.exports = {
     extend: {
       colors: {
         green: '#38743d',
+        yellow: '#dbcd5c',
+        white: '#eeeeec',
       },
       fontFamily: {
         sans: ['Work Sans', 'sans-serif'],
