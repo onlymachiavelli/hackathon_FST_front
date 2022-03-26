@@ -64,9 +64,12 @@ const Reader = () => {
     reader.readAsBinaryString(file)
   }
   return (
-    <div>
-      <input type="file" accept=".csv,.xlsx,.xls" onChange={handleFileUpload} />
-    </div>
+    <input
+      type="file"
+      accept=".csv,.xlsx,.xls"
+      onChange={handleFileUpload}
+      className="cursor-pointer button primary new"
+    />
   )
 }
 
