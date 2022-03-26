@@ -1,8 +1,14 @@
 import Left from '../components/left_login'
 import Right from '../components/right_login'
+import {Helmet} from 'react-helmet-async'
 const Signin = () => {
   return (
+    <>
+        <Helmet>
+            <title>Login Account</title>
+        </Helmet>
     <div className="w-full h-screen grid place-content-center grid-cols-2  ">
+       
       <aside className="w-full h-screen bg-white ">
         <Left />
       </aside>
@@ -13,6 +19,7 @@ const Signin = () => {
         <Right />
       </div>
     </div>
+    </>
   )
 }
 

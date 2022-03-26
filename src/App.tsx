@@ -13,7 +13,7 @@ import MDTransactions from './pages/MDTransactions'
 import MDUsers from './pages/MDUsers'
 import MDPassDue from './pages/MDPassDue'
 import UsersProfile from './pages/UsersProfile'
-import Dashboard from './pages/dashboard'
+import Dashboard from './pages/Dashboard'
 
 const App = () => {
   return (

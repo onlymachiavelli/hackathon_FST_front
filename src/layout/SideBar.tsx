@@ -1,4 +1,4 @@
-const Sidebar = () =>{
+const SideBar = () =>{
     return (
   <nav aria-label="side bar" aria-orientation="vertical" className="flex-none flex flex-col items-center text-center bg-green text-gray-400 border-r">
     <div className="h-16 flex items-center w-full">
@@ -61,4 +61,4 @@ const Sidebar = () =>{
 }
 
 
-export default Sidebar
+export default SideBar
