@@ -64,12 +64,18 @@ const Reader = () => {
     reader.readAsBinaryString(file)
   }
   return (
+    <label
+              className="button primary new cursor-pointer"
+            >           
     <input
       type="file"
       accept=".csv,.xlsx,.xls"
       onChange={handleFileUpload}
-      className="cursor-pointer button primary new"
+      className="hidden"
     />
+                  <span className="font-sans">Import from CSV</span>
+
+     </label>
   )
 }
 

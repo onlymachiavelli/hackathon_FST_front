@@ -15,7 +15,7 @@ const LLDashboard = () => {
             </h1>
             </header>
             <main className="flex-grow flex min-h-0 border-t">
-                <NotificationPanel>
+                <NotificationPanel title="Updates">
                     <Card title="Issue with my bath tub" body="I need a plomber this afternoon" footer="Appartment 45"/>
                     
                 </NotificationPanel>
