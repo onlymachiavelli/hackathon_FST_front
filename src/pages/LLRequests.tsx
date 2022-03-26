@@ -1,8 +1,9 @@
-import Layout from '../../layout/LandlordLayout'
+import Layout from '../layout/LandlordLayout'
+
 const LandLoard = () => {
   return (
     <Layout>
-      <h1>LandLoard</h1>
+      <h1>Moderators Requests CRUD</h1>
     </Layout>
   )
 }

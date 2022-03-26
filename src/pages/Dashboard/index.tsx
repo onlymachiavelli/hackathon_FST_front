@@ -6,7 +6,7 @@ import SideBar from "../../layout/SideBar"
 
 const Dashboard = () =>{
     return (
-        <div className="h-full w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
+        <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
             <SideBar />            
             <div className="flex-1 flex flex-col">
             <TopBar/>
