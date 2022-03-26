@@ -1,4 +1,4 @@
-import Layout from '../layout/LandlordLayout'
+// import Layout from '../layout/LandlordLayout'
 import {
   MapContainer,
   TileLayer,
@@ -59,19 +59,15 @@ const LandLoard = () => {
   console.log(store.mine)
 
   return (
-    <Layout>
-      <h1>Lands CRUD</h1>
-
-      <div className="w-full h-screen">
-        <MapContainer
-          center={[36.833251, 10.1461659]}
-          zoom={13}
-          className="w-full h-screen"
-        >
-          <CheckPosition />
-        </MapContainer>
-      </div>
-    </Layout>
+    <div className="w-full h-screen">
+      <MapContainer
+        center={[36.833251, 10.1461659]}
+        zoom={13}
+        className="w-full h-screen"
+      >
+        <CheckPosition />
+      </MapContainer>
+    </div>
   )
 }
 

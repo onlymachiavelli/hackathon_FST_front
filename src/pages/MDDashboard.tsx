@@ -1,7 +1,7 @@
 import Card from '../layout/Card'
 import NotificationPanel from '../components/NotificationPanel'
-import TopBar from '../layout/TopBar'
-import SideBar from '../layout/SideBar'
+import TopBar from '../layout/Moderator/TopBar'
+import SideBar from '../layout/Moderator/SideBar'
 import Stats from '../components/Stats'
 const MDDashboard = () => {
   return (

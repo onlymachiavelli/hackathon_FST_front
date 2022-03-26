@@ -1,8 +1,7 @@
-import Layout from '../layout/LandlordLayout'
 import ModCard from './../components/ModeratorReqCard'
 const LandLoard = () => {
   return (
-    <Layout>
+    <>
       <h1 className="font-bold ">Moderators Requests CRUD</h1>
       <br />
       <div className="w-7/12 grid grid-cols-1">
@@ -12,7 +11,7 @@ const LandLoard = () => {
         </div>
         <div></div>
       </div>
-    </Layout>
+    </>
   )
 }
 

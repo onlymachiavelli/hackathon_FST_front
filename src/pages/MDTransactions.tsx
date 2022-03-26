@@ -1,6 +1,6 @@
 import TransactionCard from '../components/TransactionCard'
-import TopBar from '../layout/TopBar'
-import SideBar from '../layout/SideBar'
+import TopBar from '../layout/Moderator/TopBar'
+import SideBar from '../layout/Moderator/SideBar'
 
 const MDTransactions = () => {
   return (
