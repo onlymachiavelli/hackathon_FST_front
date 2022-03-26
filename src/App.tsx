@@ -15,6 +15,8 @@ import MDPassDue from './pages/MDPassDue'
 import UsersProfile from './pages/UsersProfile'
 import { useUser } from './store'
 import { useEffect } from 'react'
+import 'leaflet/dist/leaflet.css'
+import Protected from './components/Protected'
 
 const App = () => {
   const store = useUser()
@@ -34,7 +36,14 @@ const App = () => {
         <Route path="/ll/moderators" element={<LLModerators />} />
         <Route path="/ll/requests" element={<LLRequests />} />
 
-        <Route path="/md" element={<MDDashboard />} />
+        <Route
+          path="/md"
+          element={
+            <Protected role="MODERATOR">
+              <MDDashboard />
+            </Protected>
+          }
+        />
         <Route path="/md/feedback" element={<MDFeedback />} />
         <Route path="/md/rents" element={<MDRents />} />
         <Route path="/md/transactions" element={<MDTransactions />} />

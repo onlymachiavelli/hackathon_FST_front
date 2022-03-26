@@ -41,8 +41,40 @@ const MDTransactions = () => {
               amount={69.42}
               date={'12/12/2022'}
             />
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
+
+            <TransactionCard
+              fullname={'Only Machiavelli'}
+              amount={69.42}
+              date={'12/12/2022'}
+            />
           </div>
-          <div></div>
         </main>
       </div>
     </div>
