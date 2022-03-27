@@ -3,9 +3,15 @@ import SideBar from '../layout/Moderator/SideBar'
 import '../buttons.css'
 // @ts-ignore
 import Modal from '../layout/Modal/index'
-import { useState } from 'react'
-import { useRent } from '../store'
+import { useState, useEffect } from 'react'
+import { useTransaction } from '../store'
 const MDRents = () => {
+  const store = useTransaction()
+
+  useEffect(() => {
+    store.launchGetUsersThatHasntPaidYet()
+  }, [])
+
   const [show, setShow] = useState(false)
   return (
     <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
@@ -17,7 +23,7 @@ const MDRents = () => {
           className="flex-none flex h-16 bg-gray-100 border-t px-4 items-center"
         >
           <h1 id="page-caption" className="text-lg">
-            Manage Rents (Current Month)
+            Residents that hasn't payed yet
           </h1>
           <div className="mr-5 ml-auto"></div>
         </header>
@@ -29,9 +35,6 @@ const MDRents = () => {
                   Tenant ID
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Apt.
-                </th>
-                <th scope="col" className="px-6 py-3">
                   Given Name
                 </th>
                 <th scope="col" className="px-6 py-3">
@@ -40,47 +43,51 @@ const MDRents = () => {
                 <th scope="col" className="px-6 py-3">
                   Rent Cost
                 </th>
-                <th scope="col" className="px-6 py-3">
-                  Preferred Payment Method
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Payment ID
-                </th>
                 <th scope="col" className="px-6 py-3"></th>
               </tr>
             </thead>
 
             <tbody>
-              <tr className="bg-white border-b">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                >
-                  10568452
-                </th>
-                <td className="px-6 py-4">23</td>
-                <td className="px-6 py-4">James McGill</td>
-                <td className="px-6 py-4">92911404</td>
-                <td className="px-6 py-4">
-                  <i>520.00 TND</i>
-                </td>
-                <td className="px-6 py-4">Hand to hand</td>
-                <td className="px-6 py-4">N/A</td>
+              {store.users.map(item => (
+                <tr className="bg-white border-b" key={item.id}>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                  >
+                    {item.id}
+                  </th>
+                  <td className="px-6 py-4">{item.fullname}</td>
+                  <td className="px-6 py-4">{item.phone}</td>
+                  <td className="px-6 py-4">
+                    <i>{item.residentAtPriceOf} TND</i>
+                  </td>
 
-                <td className="px-9 py-4 text-right ">
-                  <button className="text-white bg-green hover:bg-hoverGreen focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  ">
-                    Mark as paid
-                  </button>
-                  &nbsp;
-                  <button className="text-black bg-yellow hover:bg-hoverYellow focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  ">
-                    Warn
-                  </button>
-                  &nbsp;
-                  <button className="text-white bg-red hover:bg-hoverRed focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  ">
-                    Suspend
-                  </button>
-                </td>
-              </tr>
+                  <td className="px-9 py-4 text-right ">
+                    <button
+                      onClick={async () => {
+                        await store.create(item.id)
+                        store.launchGetUsersThatHasntPaidYet()
+                      }}
+                      className="text-white bg-green hover:bg-hoverGreen focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+                    >
+                      Mark as paid
+                    </button>
+                    &nbsp;
+                    <button
+                      onClick={async () => {
+                        await store.warnUser(item.id)
+                      }}
+                      className="text-black bg-yellow hover:bg-hoverYellow focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  "
+                    >
+                      Warn
+                    </button>
+                    &nbsp;
+                    <button className="text-white bg-red hover:bg-hoverRed focus:ring-4 focus:outline-none  font-small rounded-sm text-sm w-full sm:w-auto px-5 py-2.5 text-center  ">
+                      Suspend
+                    </button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </main>

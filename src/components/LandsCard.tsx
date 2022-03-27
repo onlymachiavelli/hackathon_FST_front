@@ -12,7 +12,8 @@ const LandCard = ({ ...props }) => {
       <p className="font-bold text-gray-900 pr-10">{props.fullname}</p>
       &nbsp;&nbsp;
       <Link
-        to="/"
+        target="_blank"
+        to={`/map/${props.lat}/${props.lng}`}
         className="bg-transparent hover:bg-green hover:text-[white] text-green font-semibold  py-2 px-5 border border-green  rounded-sm flex items-center justify-center"
       >
         View Map

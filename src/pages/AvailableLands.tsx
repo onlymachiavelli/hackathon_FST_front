@@ -10,8 +10,6 @@ const AvailableLands = () => {
     store.launchGetAll()
   }, [])
 
-  console.log(store.all)
-
   return (
     <div>
       <TopBar />

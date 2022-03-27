@@ -81,7 +81,53 @@ export const getMyRents = async () => {
   return data
 }
 
-export const addRent = async (body: string) => {
+export const addRent = async (body: any) => {
   const { data } = await axios.post(`/rents/`, body)
+  return data
+}
+
+export const getFeedbacks = async () => {
+  const { data } = await axios.get(`/feedbacks/forme`)
+  return data
+}
+
+export const addFeedback = async (body: string) => {
+  const { data } = await axios.post(`/feedbacks/`, body)
+  return data
+}
+
+export const initPayment = async () => {
+  const { data } = await axios.post(`/payments/paymee`)
+  return data
+}
+
+export const getTransactionsForResident = async () => {
+  const { data } = await axios.get(`/transactions/my`)
+  return data
+}
+
+export const createTransaction = async (id: string) => {
+  const { data } = await axios.post(`/transactions/${id}`, {
+    month: new Date().getMonth(),
+    year: new Date().getFullYear(),
+  })
+  return data
+}
+
+export const warnUser = async (id: string) => {
+  const { data } = await axios.post(`/transactions/warn/${id}`)
+  return data
+}
+
+export const getTransactionsForLand = async () => {
+  const { data } = await axios.get(`/transactions/forme`)
+  return data
+}
+
+export const getUsersThatHasntPaidYet = async () => {
+  const { data } = await axios.post(`/transactions/missing`, {
+    month: new Date().getMonth(),
+    year: new Date().getFullYear(),
+  })
   return data
 }

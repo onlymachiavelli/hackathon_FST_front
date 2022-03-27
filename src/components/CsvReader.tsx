@@ -64,6 +64,7 @@ const Reader = () => {
       console.log(results)
 
       await store.addMany({ users: results.list })
+      store.launchGetAll()
     }
     reader.readAsBinaryString(file)
   }

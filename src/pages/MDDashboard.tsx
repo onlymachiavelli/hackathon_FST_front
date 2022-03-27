@@ -9,7 +9,15 @@ import { Plus } from '../components/svg'
 import Modal from '../layout/Modal/index'
 import { useState, useEffect } from 'react'
 import { useRent } from '../store'
+import { useFeedback } from '../store'
+
 const MDDashboard = () => {
+  const fbStore = useFeedback()
+
+  useEffect(() => {
+    fbStore.launchGetMine()
+  }, [])
+
   const store = useRent()
 
   useEffect(() => {
@@ -41,31 +49,13 @@ const MDDashboard = () => {
         </header>
         <main className="flex-grow flex min-h-0 border-t overflow-y-scroll">
           <NotificationPanel title="Reclaims">
-            <Card
-              title="Issue with my bath tub"
-              body="I need a plomber this afternoon"
-              footer="Apartment 45"
-            />
-            <Card
-              title="Issue with my bath tub"
-              body="I need a plomber this afternoon"
-              footer="Apartment 45"
-            />
-            <Card
-              title="Issue with my bath tub"
-              body="I need a plomber this afternoon"
-              footer="Apartment 45"
-            />
-            <Card
-              title="Issue with my bath tub"
-              body="I need a plomber this afternoon"
-              footer="Apartment 45"
-            />
-            <Card
-              title="Issue with my bath tub"
-              body="I need a plomber this afternoon"
-              footer="Apartment 45"
-            />
+            {fbStore.all.map(item => (
+              <Card
+                title={item.owner.fullname}
+                body={item.content}
+                key={item.id}
+              />
+            ))}
           </NotificationPanel>
           <div className="flex-col h-full w-full">
             <section

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const AVRCard = ({ ...props }) => {
   return (
     <div className="bg-[white] p-4 rounded-md  border  ">
@@ -13,9 +15,13 @@ const AVRCard = ({ ...props }) => {
       <p className="">{props.description}</p>
       <br />
       <div className="flex  justify-center items-center">
-        <button className="hover:bg-transparent hover:text-green  text-[white] bg-green hover:bg-greenHover font-semibold  py-2 px-5 border border-green  rounded block  ">
+        <Link
+          target="_blank"
+          to={`/map/${props.lan}/${props.lng}`}
+          className="hover:bg-transparent hover:text-green  text-[white] bg-green hover:bg-greenHover font-semibold  py-2 px-5 border border-green  rounded block  "
+        >
           View Map
-        </button>
+        </Link>
         &nbsp;
         <button className="bg-transparent  text-red font-semibold  py-2 px-5 border border-red  rounded block  ">
           END

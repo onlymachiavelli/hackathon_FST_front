@@ -27,6 +27,8 @@ const AvailableRents = () => {
                 title={rent.title}
                 phone={rent.land.moderator.phone}
                 description={rent.content}
+                lat={rent.land.latitude}
+                lng={rent.land.longitude}
               />
             ))}
           </div>

@@ -17,16 +17,18 @@ const ModCard = ({ ...props }) => {
       <br />
       <div className="flex gap-2 justify-end">
         <button
-          onClick={() => {
-            store.accept(props.id)
+          onClick={async () => {
+            await store.accept(props.id)
+            store.launchGetMine()
           }}
           className="bg-green hover:bg-hoverGreen  text-white font-bold py-2 px-5 rounded-sm flex items-center justify-center"
         >
           <Done Width="17" /> &nbsp; Accept
         </button>
         <button
-          onClick={() => {
-            store.reject(props.id)
+          onClick={async () => {
+            await store.reject(props.id)
+            store.launchGetMine()
           }}
           className="bg-transparent  text-red font-semibold  py-2 px-5 border border-red  rounded-sm flex items-center justify-center"
         >

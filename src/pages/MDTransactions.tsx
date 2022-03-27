@@ -1,8 +1,14 @@
 import TransactionCard from '../components/TransactionCard'
 import TopBar from '../layout/Moderator/TopBar'
 import SideBar from '../layout/Moderator/SideBar'
-
+import { useTransaction } from '../store'
+import { useEffect } from 'react'
 const MDTransactions = () => {
+  const store = useTransaction()
+  useEffect(() => {
+    store.launchGetLandTransaction()
+  }, [])
+
   return (
     <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
       <SideBar />
@@ -18,62 +24,14 @@ const MDTransactions = () => {
         </header>
         <main className=" min-h-0 border-t grid grid-cols-2 pt-12 place-items-center">
           <div className="w-full grid gap-y-2 px-10 place-items-center ">
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
-
-            <TransactionCard
-              fullname={'Only Machiavelli'}
-              amount={69.42}
-              date={'12/12/2022'}
-            />
+            {store.lands.map(tx => (
+              <TransactionCard
+                key={tx.id}
+                fullname={tx.owner.fullname}
+                amount={tx.owner.residentAtPriceOf}
+                date={`${tx.month}/${tx.year}`}
+              />
+            ))}
           </div>
         </main>
       </div>

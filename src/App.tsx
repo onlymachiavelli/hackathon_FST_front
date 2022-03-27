@@ -19,6 +19,7 @@ import 'leaflet/dist/leaflet.css'
 import Protected from './components/Protected'
 import AvailableLands from './pages/AvailableLands'
 import AvailableRents from './pages/AvailableRents'
+import ViewInMap from './pages/ViewInMap'
 const App = () => {
   const store = useUser()
 
@@ -54,6 +55,8 @@ const App = () => {
 
         <Route path="/lands" element={<AvailableLands />} />
         <Route path="/rents" element={<AvailableRents />} />
+
+        <Route path="/map/:lat/:lng" element={<ViewInMap />} />
       </Routes>
     </BrowserRouter>
   )

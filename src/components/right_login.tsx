@@ -14,7 +14,7 @@ export const Right = () => {
     }
 
     await store.launchLogin(data.email, data.password, () => {
-      push('/me')
+      push('/')
     })
   }
 
