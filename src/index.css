@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+canvas{
+
+    width:100vh !important;
+    height:400px !important;
+    padding: 20px;
+  
+  }

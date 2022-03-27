@@ -16,7 +16,7 @@ const MDDashboard = () => {
               Moderator's Dashboard
             </h1>
             </header>
-            <main className="flex-grow flex min-h-0 border-t">
+            <main className="flex-grow flex min-h-0 border-t overflow-y-scroll">
                 <NotificationPanel title="Reclaims">
                     <Card title="Issue with my bath tub" body="I need a plomber this afternoon" footer="Apartment 45"/>
                     <Card title="Issue with my bath tub" body="I need a plomber this afternoon" footer="Apartment 45"/>
@@ -26,20 +26,28 @@ const MDDashboard = () => {
 
                     
                 </NotificationPanel>
-                <div className="flex-col">
+                <div className="flex-col h-full">
                 <section aria-label="main content" className="flex min-h-0 flex-col flex-auto border-l">
                 <Stats paid="26" notpaid="14" rented="50" vacant="10"/>
                 </section>
-      <section className="border-l h-screen p-4">
+      <section className="border-l h-full p-4 ">
       <button className="bg-green hover:bg-hoverGreen  text-white font-bold py-2 px-5 rounded-sm flex items-center justify-center">
         <Plus Width="17" /> &nbsp; New Rent Offer
       </button>
-      <div className="grid gap-1 grid-cols-2 pt-4">
+      <div className="grid gap-1 grid-cols-2 h-full pt-4">
         <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
         <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
         <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
         <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+        <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+        <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+        <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+        <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+        <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+
       </div>
+      <br/>
+<br/>
       </section>
       </div>
                 </main>
