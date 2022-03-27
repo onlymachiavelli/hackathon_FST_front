@@ -16,8 +16,22 @@ export const useRequests = store<RequestStore>((set, get) => ({
       await services.requestModeration(land)
     } catch {}
   },
-  reject: async (land: string) => {},
-  accept: async (land: string) => {},
+  reject: async (land: string) => {
+    try {
+      await services.rejectRequest(land)
+      set({
+        mine: get().mine.filter(request => request.land.id !== land),
+      })
+    } catch {}
+  },
+  accept: async (land: string) => {
+    try {
+      await services.acceptRequest(land)
+      set({
+        mine: get().mine.filter(request => request.land !== land),
+      })
+    } catch {}
+  },
   launchGetMine: async () => {
     try {
       const data = await services.getRequests()

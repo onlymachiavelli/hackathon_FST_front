@@ -16,6 +16,7 @@ type UserStore = {
   launchLogin: (username: string, password: string, cb: Function) => void
   launchSignup: (data: any, cb: Function) => void
   getMe: () => void
+  logout: (cb: Function) => void
 }
 
 export const useUser = store<UserStore>(set => ({
@@ -101,8 +102,9 @@ export const useUser = store<UserStore>(set => ({
       })
     }
   },
-  logout: () => {
+  logout: cb => {
     localStorage.removeItem('token')
+    cb()
   },
   getMe: async () => {
     try {

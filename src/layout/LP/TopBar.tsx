@@ -1,5 +1,21 @@
-import { NavLink, Link } from "react-router-dom"
+import { NavLink, Link } from 'react-router-dom'
+import { useUser } from '../../store'
+
+const getURLByRole = (role: string) => {
+  switch (role) {
+    case 'LANDLORD':
+      return '/ll/'
+    case 'MODERATOR':
+      return '/md/'
+    case 'RESIDENT':
+      return '/me/'
+    default:
+      return '/signin'
+  }
+}
 const TopBar = () => {
+  const store = useUser()
+
   return (
     <nav
       aria-label="top bar"
@@ -10,11 +26,12 @@ const TopBar = () => {
         aria-orientation="horizontal"
         className="flex"
       >
-        <li><Link to="/">
-          <img
-            className="ml-5 h-11 w-auto mx-auto my-3"
-            src="/public/assets/fulllogo.png"
-          />
+        <li>
+          <Link to="/">
+            <img
+              className="ml-5 h-11 w-auto mx-auto my-3"
+              src="/public/assets/fulllogo.png"
+            />
           </Link>
         </li>
       </ul>
@@ -24,33 +41,46 @@ const TopBar = () => {
         aria-orientation="horizontal"
         className="flex mx-auto ml-2 mt-5"
       >
-          <li><NavLink to="/" className={({ isActive }) => {
-              return `p-5 text-xl ${
-                isActive ? 'font-bold' : ''
-              }`
-            }}>
-          Homepage
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => {
+              return `p-5 text-md ${isActive ? 'font-bold' : ''}`
+            }}
+          >
+            Homepage
           </NavLink>
         </li>
-        <li><NavLink to="/lands" className={({ isActive }) => {
-              return `p-5 text-xl ${
-                isActive ? 'font-bold' : ''
-              }`
-            }}>
-          Properties
+        <li>
+          <NavLink
+            to="/lands"
+            className={({ isActive }) => {
+              return `p-5 text-md ${isActive ? 'font-bold' : ''}`
+            }}
+          >
+            Properties
           </NavLink>
         </li>
-        <li><NavLink to="/rents" className={({ isActive }) => {
-              return `p-5 text-xl ${
-                isActive ? 'font-bold' : ''
-              }`
-            }}>
-          Rents
+        <li>
+          <NavLink
+            to="/rents"
+            className={({ isActive }) => {
+              return `p-5 text-md ${isActive ? 'font-bold' : ''}`
+            }}
+          >
+            Rents
+          </NavLink>
+
+          <NavLink
+            to={getURLByRole(store.user?.role)}
+            className={({ isActive }) => {
+              return `p-5 text-md ${isActive ? 'font-bold' : ''}`
+            }}
+          >
+            Dashboard
           </NavLink>
         </li>
       </ul>
-
-
 
       <ul
         aria-label="top bar right"
