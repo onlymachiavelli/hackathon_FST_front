@@ -23,18 +23,18 @@ const Home = () => {
         <div className="grid grid-cols-3 gap-5 w-3/4 my-4">
           <CardHome
             title="Easy Managements"
-            description="Lorem ipsum dolor sit amet. Aut omnis tempore eum consequatur harum ab "
+            description="Easily include your tenants, control rents. People can also easily find properties that fit their needs."
             svg={<Managements Width="60" />}
           />
           <CardHome
             title="Agile"
-            description="Lorem ipsum dolor sit amet. Aut omnis tempore eum consequatur harum ab "
+            description="Manage all your properties, tenants and moderators with our quick-to-setup agile system based on modern stack."
             svg={<Agile Width="50" />}
           />
 
           <CardHome
             title="Safe Online Payement"
-            description="Lorem ipsum dolor sit amet. Aut omnis tempore eum consequatur harum ab "
+            description="Ability to pay your rent hand-to-hand at our moderators syndical offices or online through secure third-party services like Paymee."
             svg={<Safe Width="60" />}
           />
         </div>

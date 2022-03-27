@@ -10,10 +10,10 @@ const Hero = () => {
             <div>
               <div className="content float-left py-4 px-5 my-5">
                 <div className="heading mb-10 text-6xl">
-                  Meet LandHippo, The blah blah blah
+                  Secure Your Next Deal On LandHippo
                 </div>
                 <div className="text-2xl mb-10 leading-normal hidden sm:block">
-                  Affordable Properties From A Landlord You Trust!
+                Avoid The Burden. Get The Most Affordable Prices. And Pay With Ease. 
                 </div>
               </div>
               
