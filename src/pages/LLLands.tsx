@@ -98,7 +98,7 @@ const LandLoard = () => {
               />
             ))}
           </NotificationPanel>
-          <div className="w-full h-screen">
+          <div className="w-full h-full">
             <MapContainer
               center={[36.833251, 10.1461659]}
               zoom={13}
