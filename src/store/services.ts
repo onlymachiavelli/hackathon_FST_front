@@ -26,3 +26,17 @@ export const getAllLands = async () => {
   const { data } = await axios.get('/lands/all')
   return data
 }
+
+export const requestModeration = async (land: string) => {
+  const { data } = await axios.post('/requests', { land })
+  return data
+}
+
+export const getRequests = async () => {
+  const { data } = await axios.get('/requests/my')
+  return data
+}
+
+export const acceptRequest = async (id: string) => {}
+
+export const rejectRequest = async (id: string) => {}
