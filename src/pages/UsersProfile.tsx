@@ -1,7 +1,22 @@
 import TopBar from '../layout/LP/TopBar'
 import { Money, Feed, Send } from '../components/svg'
 import TransacitonCard from '../components/TransactionCard'
+import { useUser } from '../store'
+import { Navigate } from 'react-router-dom'
+import { useEffect } from 'react'
 const Transactions = () => {
+  const store = useUser()
+  useEffect(() => {
+    store.getMe()
+  }, [])
+
+  if (store.loading) return <h1>loading</h1>
+
+  if (!store.user) return <Navigate to="/signin" />
+  if (store.user?.role === 'LANDLORD') return <Navigate to="/ll" />
+
+  if (store.user?.role === 'MODERATOR') return <Navigate to="/md" />
+
   return (
     <div>
       <TopBar />

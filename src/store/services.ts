@@ -46,3 +46,18 @@ export const rejectRequest = async (id: string) => {
   const { data } = await axios.post(`/requests/my/${id}/delete`)
   return data
 }
+
+export const addUser = async (body: any) => {
+  const { data } = await axios.post(`/users/addone`, body)
+  return data
+}
+
+export const addUsers = async (body: any) => {
+  const { data } = await axios.post(`/users/addmany`, body)
+  return data
+}
+
+export const activateUser = async (id: string) => {
+  const { data } = await axios.post(`/users/activate/${id}`)
+  return data
+}
