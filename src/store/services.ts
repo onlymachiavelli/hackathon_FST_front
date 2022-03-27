@@ -37,6 +37,12 @@ export const getRequests = async () => {
   return data
 }
 
-export const acceptRequest = async (id: string) => {}
+export const acceptRequest = async (id: string) => {
+  const { data } = await axios.post(`/requests/my/${id}/accept`)
+  return data
+}
 
-export const rejectRequest = async (id: string) => {}
+export const rejectRequest = async (id: string) => {
+  const { data } = await axios.post(`/requests/my/${id}/delete`)
+  return data
+}

@@ -33,6 +33,7 @@ const LandLoard = () => {
             <div className="gap-2 grid grid-cols-2 ">
               {store.mine.map(req => (
                 <ModCard
+                  id={req.id}
                   key={req.id}
                   fullname={req.moderator.fullname}
                   land={req.land.id}
