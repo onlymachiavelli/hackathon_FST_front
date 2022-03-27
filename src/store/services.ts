@@ -61,3 +61,27 @@ export const activateUser = async (id: string) => {
   const { data } = await axios.post(`/users/activate/${id}`)
   return data
 }
+
+export const getAllUsers = async () => {
+  const { data } = await axios.get(`/users/myresedences`)
+  return data
+}
+
+export const getAllModerators = async () => {
+  const { data } = await axios.get(`/users/mymods`)
+  return data
+}
+export const getAllRents = async () => {
+  const { data } = await axios.get(`/rents`)
+  return data
+}
+
+export const getMyRents = async () => {
+  const { data } = await axios.get(`/rents/my`)
+  return data
+}
+
+export const addRent = async (body: string) => {
+  const { data } = await axios.post(`/rents/`, body)
+  return data
+}

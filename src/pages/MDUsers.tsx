@@ -3,14 +3,18 @@ import SideBar from '../layout/Moderator/SideBar'
 import '../buttons.css'
 // @ts-ignore
 import Modal from '../layout/Modal/index'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Reader from '../components/CsvReader'
 import { useResidents } from '../store'
-
+import toast from 'react-hot-toast'
 const MDUsers = () => {
   const [show, setShow] = useState(false)
+
   const store = useResidents()
 
+  useEffect(() => {
+    store.launchGetAll()
+  }, [])
   const handleCreateUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     const fromData = new FormData(e.currentTarget)
@@ -52,9 +56,6 @@ const MDUsers = () => {
                   Tenant ID
                 </th>
                 <th scope="col" className="px-6 py-3">
-                  Apt.
-                </th>
-                <th scope="col" className="px-6 py-3">
                   Given Name
                 </th>
                 <th scope="col" className="px-6 py-3">
@@ -74,34 +75,39 @@ const MDUsers = () => {
             </thead>
 
             <tbody>
-              <tr className="bg-white border-b">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
-                >
-                  10568452
-                </th>
-                <td className="px-6 py-4">23</td>
-                <td className="px-6 py-4">James McGill</td>
-                <td className="px-6 py-4">92911404</td>
-                <td className="px-6 py-4">
-                  <a href="mailto:">
-                    <abbr title="jamesmcgill@gmail.com">Email</abbr>
-                  </a>
-                </td>
-                <td className="px-6 py-4">
-                  <i>jamesmcgill</i>
-                </td>
-                <td className="px-6 py-4">520.00 TND</td>
+              {store.all?.map(user => (
+                <tr className="bg-white border-b" key={user.id}>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+                  >
+                    {user.id}
+                  </th>
+                  <td className="px-6 py-4">{user.fullname}</td>
+                  <td className="px-6 py-4">{user.phone}</td>
+                  <td className="px-6 py-4">{user.email}</td>
+                  <td className="px-6 py-4">
+                    <i>{user.username}</i>
+                  </td>
+                  <td className="px-6 py-4">{user.residentAtPriceOf} TND</td>
 
-                <td className="px-9 py-4 text-right ">
-                  <button className="button inlineIcon activate"></button>
+                  <td className="px-9 py-4 text-right ">
+                    <button
+                      className="button inlineIcon activate"
+                      onClick={async () => {
+                        const res = await store.activate(user.id)
+                        toast.success(
+                          `username: ${res.username}, password: ${res.password}`
+                        )
+                      }}
+                    ></button>
 
-                  <button className="button inlineIcon edit"></button>
+                    <button className="button inlineIcon edit"></button>
 
-                  <button className="button inlineIcon delete"></button>
-                </td>
-              </tr>
+                    <button className="button inlineIcon delete"></button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </main>
