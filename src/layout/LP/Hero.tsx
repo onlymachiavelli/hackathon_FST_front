@@ -1,7 +1,6 @@
 const Hero = () => {
   return (
     <>
-      <div className="bg-red-200 sticky top-0"></div>
       <section className="bg-red-200 text-green-900 relative">
         <div
           id="heroimg"
@@ -34,6 +33,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </section>
     </>
