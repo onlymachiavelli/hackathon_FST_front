@@ -1,8 +1,13 @@
-const RentCard = ({ ...props }) => {
+const AVRCard = ({ ...props }) => {
   return (
     <div className="bg-[white] p-4 rounded-md  border  ">
       <p className="text-center font-bold text-gray-900 text-xl">
-        Apartement Rent 
+        Apartement Rent
+      </p>
+      <br />
+      <p className="font-bold text-gray-900 text-center">
+        {' '}
+        Phone : {props.phone}
       </p>
       <br />
       <p className="">{props.description}</p>
@@ -20,4 +25,4 @@ const RentCard = ({ ...props }) => {
   )
 }
 
-export default RentCard
+export default AVRCard

@@ -59,42 +59,18 @@ const MDDashboard = () => {
                 <Plus Width="17" /> &nbsp; New Rent Offer
               </button>
               <div className="grid gap-1 grid-cols-2 h-full pt-4">
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
                 <RentCard
                   description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
                   phone="54324884"
                 />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
-                <RentCard
-                  description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-                  phone="54324884"
-                />
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
+                <RentCard description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus " />
               </div>
               <br />
               <br />
