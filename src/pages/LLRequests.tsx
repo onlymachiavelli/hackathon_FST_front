@@ -13,7 +13,7 @@ const LandLoard = () => {
 
   useEffect(() => {
     store.launchGetMine()
-  })
+  }, [])
 
   return (
     <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">

@@ -32,7 +32,7 @@ export const useLand = store<LandStore>((set, get) => ({
   },
   launchGetAll: async () => {
     try {
-      const { data } = await services.getAllLands()
+      const data = await services.getAllLands()
       set({
         all: data,
       })
