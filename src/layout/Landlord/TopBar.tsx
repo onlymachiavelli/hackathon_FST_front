@@ -1,5 +1,5 @@
 import { useUser } from '../../store'
-
+import { Link } from 'react-router-dom'
 const TopBar = () =>{
     const store = useUser()
 
@@ -7,7 +7,7 @@ const TopBar = () =>{
     <nav aria-label="top bar" className="flex-none flex justify-between bg-gray-50 h-16">
       
       <ul aria-label="top bar left" aria-orientation="horizontal" className="flex">
-          <li><img className="h-11 w-auto mx-auto my-3" src="/public/assets/landhippo.png"/></li>
+          <li><Link to="/"><img className="h-11 w-auto mx-auto my-3" src="/public/assets/landhippo.png"/></Link></li>
         </ul>
 
         <ul aria-label="top bar right" aria-orientation="horizontal" className="px-9 flex items-center">

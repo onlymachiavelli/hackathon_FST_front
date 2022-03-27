@@ -1,6 +1,6 @@
 import LandCard from '../components/LandsCard'
 import { Money, Feed, Send } from '../components/svg'
-import TopBar from '../layout/Moderator/TopBar'
+import TopBar from '../layout/LP/TopBar'
 const AvailableLands = () => {
   return (
     <div>

@@ -1,5 +1,5 @@
 import { useUser } from '../../store'
-
+import { Link } from 'react-router-dom'
 const TopBar = () => {
   const store = useUser()
 
@@ -14,10 +14,12 @@ const TopBar = () => {
         className="flex"
       >
         <li>
+        <Link to="/">
           <img
             className="h-11 w-auto mx-auto my-3"
             src="/public/assets/landhippo.png"
           />
+        </Link>
         </li>
       </ul>
 
