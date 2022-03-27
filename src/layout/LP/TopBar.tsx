@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 const TopBar = () => {
   return (
     <nav
@@ -10,20 +10,28 @@ const TopBar = () => {
         aria-orientation="horizontal"
         className="flex"
       >
-        <li><NavLink to="/">
+        <li><Link to="/">
           <img
-            className="h-11 w-auto mx-auto my-3"
+            className="ml-5 h-11 w-auto mx-auto my-3"
             src="/public/assets/fulllogo.png"
           />
-          </NavLink>
+          </Link>
         </li>
       </ul>
 
       <ul
         aria-label="top bar center"
         aria-orientation="horizontal"
-        className="flex ml-20 mt-4"
+        className="flex mx-auto ml-2 mt-5"
       >
+          <li><NavLink to="/" className={({ isActive }) => {
+              return `p-5 text-xl ${
+                isActive ? 'font-bold' : ''
+              }`
+            }}>
+          Homepage
+          </NavLink>
+        </li>
         <li><NavLink to="/lands" className={({ isActive }) => {
               return `p-5 text-xl ${
                 isActive ? 'font-bold' : ''
