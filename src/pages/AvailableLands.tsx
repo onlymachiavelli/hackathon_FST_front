@@ -11,11 +11,10 @@ const AvailableLands = () => {
           <br />
 
           <p className="text-center text-gray-900 font-bold text-2xl pt-10">
-            LANDS
+            AVAILABLE LANDS
           </p>
-          <div className="grid grid-cols-2 w-full gap-2  place-items-center py-4">
+          <div className="grid grid-cols-2 w-full gap-1  place-items-center py-4">
             <LandCard fullname={'Only Machiavelli'} />
-
             <LandCard fullname={'Only Machiavelli'} />
             <LandCard fullname={'Only Machiavelli'} />
             <LandCard fullname={'Only Machiavelli'} />
