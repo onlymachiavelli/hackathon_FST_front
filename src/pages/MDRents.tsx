@@ -4,6 +4,7 @@ import '../buttons.css'
 // @ts-ignore
 import Modal from '../layout/Modal/index'
 import { useState } from 'react'
+import { useRent } from '../store'
 const MDRents = () => {
   const [show, setShow] = useState(false)
   return (

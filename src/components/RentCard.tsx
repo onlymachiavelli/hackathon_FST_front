@@ -2,7 +2,7 @@ const RentCard = ({ ...props }) => {
   return (
     <div className="bg-[white] p-4 rounded-md  border  ">
       <p className="text-center font-bold text-gray-900 text-xl">
-        Apartement Rent 
+        {props.title}
       </p>
       <br />
       <p className="">{props.description}</p>

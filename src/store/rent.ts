@@ -12,6 +12,10 @@ type RentStore = {
 export const useRent = store<RentStore>((set, get) => ({
   add: async data => {
     await services.addRent(data)
+    set(state => ({
+      ...state,
+      mine: [...state.mine, data],
+    }))
   },
   mine: [],
   all: [],

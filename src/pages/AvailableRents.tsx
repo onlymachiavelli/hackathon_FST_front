@@ -1,7 +1,14 @@
 import TopBar from '../layout/LP/TopBar'
-
 import AVRCard from './../components/ARCard'
+
+import { useRent } from '../store'
+import { useEffect } from 'react'
 const AvailableRents = () => {
+  const store = useRent()
+
+  useEffect(() => {
+    store.launchGetAll()
+  }, [])
   return (
     <div>
       <TopBar />
@@ -14,26 +21,14 @@ const AvailableRents = () => {
             AVAILABLE LANDS
           </p>
           <div className="grid grid-cols-2 w-full gap-1  place-items-center py-4">
-            <AVRCard
-              phone="54324884"
-              description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-            />
-            <AVRCard
-              phone="54324884"
-              description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-            />
-            <AVRCard
-              phone="54324884"
-              description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-            />
-            <AVRCard
-              phone="54324884"
-              description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-            />
-            <AVRCard
-              phone="54324884"
-              description="lorem Lorem ipsum dolor sit amet. Et sequi omnis et voluptatem facere aut rerum minima et minus "
-            />
+            {store.all.map(rent => (
+              <AVRCard
+                key={rent.id}
+                title={rent.title}
+                phone={rent.land.moderator.phone}
+                description={rent.content}
+              />
+            ))}
           </div>
         </div>
       </div>
