@@ -18,9 +18,9 @@ const AvailableRents = () => {
           <br />
 
           <p className="text-center text-gray-900 font-bold text-2xl pt-10">
-            AVAILABLE LANDS
+            AVAILABLE RENTALS
           </p>
-          <div className="grid grid-cols-2 w-full gap-1  place-items-center py-4">
+          <div className="grid grid-cols-2 w-full gap-4  place-items-center py-4">
             {store.all.map(rent => (
               <AVRCard
                 key={rent.id}

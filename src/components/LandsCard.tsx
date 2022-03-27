@@ -8,7 +8,7 @@ const LandCard = ({ ...props }) => {
 
   if (!display) return null
   return (
-    <div className=" bg-[white] p-4 rounded-md  border flex items-center px-12">
+    <div className=" bg-[white] p-4 rounded-md  border flex items-center px-12 w-full">
       <p className="font-bold text-gray-900 pr-10">{props.fullname}</p>
       &nbsp;&nbsp;
       <Link

@@ -22,8 +22,8 @@ const MDTransactions = () => {
             Transactions Log
           </h1>
         </header>
-        <main className=" min-h-0 border-t grid grid-cols-2 pt-12 place-items-center">
-          <div className="w-full grid gap-y-2 px-10 place-items-center ">
+        <main className=" min-h-0 border-t grid  pt-12 place-items-center">
+          <div className="w-full grid gap-2 grid-cols-2 px-10 place-items-center ">
             {store.lands.map(tx => (
               <TransactionCard
                 key={tx.id}

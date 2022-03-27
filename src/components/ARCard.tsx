@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const AVRCard = ({ ...props }) => {
   return (
-    <div className="bg-[white] p-4 rounded-md  border  ">
+    <div className="bg-[white] p-4 rounded-md  border w-full ">
       <p className="text-center font-bold text-gray-900 text-xl">
         {props.title}
       </p>
@@ -12,7 +12,7 @@ const AVRCard = ({ ...props }) => {
         Phone : {props.phone}
       </p>
       <br />
-      <p className="">{props.description}</p>
+      <p className="text-center">{props.description}</p>
       <br />
       <div className="flex  justify-center items-center">
         <Link
