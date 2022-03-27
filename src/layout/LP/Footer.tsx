@@ -2,7 +2,7 @@ const Footer = () =>{
 
     return (
     <>
-        <footer className="bg-gray-800 p-5 grid grid-cols-1 md:grid-cols-12">
+        <footer className="bg-gray-800 p-5 grid grid-cols-1 md:grid-cols-12 pt-10">
   <div className="md:col-span-2 pb-2 md:mb-0">
     <p className="text-gray-200">Acme</p>
     <ul className="pt-5 text-gray-400">
@@ -43,7 +43,7 @@ const Footer = () =>{
   <div className="md:col-span-4 pb-2 md:mb-0">
     <p className="text-gray-200">Newsletter Subscription</p>
     <div className="pt-5">
-      <input type="text" className="rounded-sm p-2 w-full" placeholder="@ Subscribe to our newsletter...."/>
+      <input type="text" className="rounded-sm p-2 w-2/3 outline-none" placeholder="@ Subscribe to our newsletter...."/>
       <button className="bg-green text-white px-3 py-2 rounded-sm mt-2">Subscribe</button>
     </div>
   </div>
