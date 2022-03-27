@@ -15,7 +15,7 @@ const Signin = () => {
         </aside>
         <div className="bg-white/50 w-full p-20">
           <p className="font-bold  text-gray-900 text-3xl text-center ">
-            Create Account
+            Access Account
           </p>
           <Right />
         </div>
