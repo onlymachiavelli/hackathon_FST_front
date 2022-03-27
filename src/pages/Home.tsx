@@ -1,8 +1,11 @@
+import TopBar from "../layout/LP/TopBar"
+import Hero from "../layout/LP/Hero"
 const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <TopBar/>
+      <Hero/>
+    </>
   )
 }
 
