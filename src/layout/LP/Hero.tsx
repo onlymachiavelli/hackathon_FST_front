@@ -23,11 +23,15 @@ const Hero = () => {
                     no-underline
                     btn btn-primary 
                     block sm:inline-block global-transition
-                    text-white" href="" target="">
-                <div className="flex justify-center items-center">
-                  <span className="fa fa-xs fa-arrow-right ml-4"></span>
-                </div>
-              </a>
+                    text-white"
+                  href=""
+                  target=""
+                >
+                  <div className="flex justify-center items-center">
+                    <span className="fa fa-xs fa-arrow-right ml-4"></span>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>

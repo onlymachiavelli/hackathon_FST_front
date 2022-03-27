@@ -3,11 +3,16 @@ import { Managements, Safe, Agile } from '../components/svg'
 import TopBar from '../layout/LP/TopBar'
 import Hero from '../layout/LP/Hero'
 import Footer from '../layout/LP/Footer'
+import Desc from '../components/Home/desc'
 const Home = () => {
   return (
     <div className="w-full ">
       <TopBar />
       <Hero />
+
+      <br />
+      <br />
+      <Desc />
       <br />
       <br />
       <p className="text-center px-10 font-bold text-green text-3xl">
@@ -34,7 +39,7 @@ const Home = () => {
           />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
