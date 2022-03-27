@@ -1,11 +1,33 @@
-import TopBar from "../layout/LP/TopBar"
-import Hero from "../layout/LP/Hero"
+import CardHome from '../components/Home/Cards'
+import { Managements } from '../components/svg'
+import TopBar from '../layout/LP/TopBar'
+import Hero from '../layout/LP/Hero'
 const Home = () => {
   return (
-    <>
-      <TopBar/>
-      <Hero/>
-    </>
+    <div className="w-full ">
+      <TopBar />
+      <Hero />
+      <div className="flex items-center justify-center">
+        <div className="grid grid-cols-3 gap-5 w-3/4 ">
+          <CardHome
+            title="Easy Managements"
+            description="Lorem ipsum dolor sit amet. Aut omnis tempore eum consequatur harum ab "
+            svg={<Managements Width="60" />}
+          />
+          <CardHome
+            title="Easy Managements"
+            description="Lorem ipsum dolor sit amet. Aut omnis tempore eum consequatur harum ab "
+            svg={<Managements Width="60" />}
+          />
+
+          <CardHome
+            title="Easy Managements"
+            description="Lorem ipsum dolor sit amet. Aut omnis tempore eum consequatur harum ab "
+            svg={<Managements Width="60" />}
+          />
+        </div>
+      </div>
+    </div>
   )
 }
 
