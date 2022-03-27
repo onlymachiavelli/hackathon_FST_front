@@ -5,8 +5,22 @@ import '../buttons.css'
 import Modal from '../layout/Modal/index'
 import { useState } from 'react'
 import Reader from '../components/CsvReader'
+import { useResidents } from '../store'
+
 const MDUsers = () => {
   const [show, setShow] = useState(false)
+  const store = useResidents()
+
+  const handleCreateUser = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    const fromData = new FormData(e.currentTarget)
+    const data = Object.fromEntries(fromData.entries())
+
+    await store.addOne(data)
+
+    setShow(false)
+  }
+
   return (
     <div className="h-screen w-full flex overflow-hidden antialiased text-gray-800 bg-gray-100">
       <SideBar />
@@ -95,42 +109,14 @@ const MDUsers = () => {
       <Modal title="New Tenant" onClose={() => setShow(false)} show={show}>
         <p>
           <div className="w-full  ">
-            <form>
-              <div className="mb-3">
-                <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                  Tenant's ID Number
-                </label>
-                <input
-                  type="number"
-                  id="id"
-                  className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="12345678"
-                  maxLength={8}
-                  minLength={8}
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                  Tenant's Apartment
-                </label>
-                <input
-                  type="number"
-                  id="apt"
-                  className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="123"
-                  maxLength={3}
-                  minLength={3}
-                  required
-                />
-              </div>
+            <form action="post" onSubmit={handleCreateUser}>
               <div className="mb-3">
                 <label className="block mb-2 text-sm font-medium text-gray-900 ">
                   Tenant's Given Name
                 </label>
                 <input
                   type="text"
-                  id="name"
+                  name="fullname"
                   className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="John Doe"
                   required
@@ -142,7 +128,7 @@ const MDUsers = () => {
                 </label>
                 <input
                   type="number"
-                  id="phone"
+                  name="phone"
                   className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="12345678"
                   maxLength={8}
@@ -156,21 +142,9 @@ const MDUsers = () => {
                 </label>
                 <input
                   type="email"
-                  id="email"
+                  name="email"
                   className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="johndoe@domain.com"
-                  required
-                />
-              </div>
-              <div className="mb-3">
-                <label className="block mb-2 text-sm font-medium text-gray-900 ">
-                  Tenant's Handle
-                </label>
-                <input
-                  type="text"
-                  id="handle"
-                  className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                  placeholder="john_doe"
                   required
                 />
               </div>
@@ -180,7 +154,7 @@ const MDUsers = () => {
                 </label>
                 <input
                   type="number"
-                  id="id"
+                  name="residentAtPriceOf"
                   className="outline-none bg-white border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="123"
                   required

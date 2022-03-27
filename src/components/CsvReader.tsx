@@ -1,5 +1,5 @@
 import * as XLSX from 'xlsx'
-
+import { useResidents } from '../store'
 const processData = (dataString: string) => {
   const dataStringLines = dataString.split(/\r\n|\n/)
   const headers = dataStringLines[0].split(
@@ -42,12 +42,14 @@ const processData = (dataString: string) => {
 }
 
 const Reader = () => {
+  const store = useResidents()
+
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (!files) return
     const file = files[0]
     const reader = new FileReader()
-    reader.onload = evt => {
+    reader.onload = async evt => {
       if (!evt.target) return
       /* Parse data */
       const bstr = evt.target.result
@@ -60,22 +62,21 @@ const Reader = () => {
       const results = processData(data)
 
       console.log(results)
+
+      await store.addMany({ users: results.list })
     }
     reader.readAsBinaryString(file)
   }
   return (
-    <label
-              className="button primary new cursor-pointer"
-            >           
-    <input
-      type="file"
-      accept=".csv,.xlsx,.xls"
-      onChange={handleFileUpload}
-      className="hidden"
-    />
-                  <span className="font-sans">Import from CSV</span>
-
-     </label>
+    <label className="button primary new cursor-pointer">
+      <input
+        type="file"
+        accept=".csv,.xlsx,.xls"
+        onChange={handleFileUpload}
+        className="hidden"
+      />
+      <span className="font-sans">Import from CSV</span>
+    </label>
   )
 }
 
