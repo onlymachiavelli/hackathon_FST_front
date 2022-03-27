@@ -22,7 +22,6 @@ const Hero = () =>{
                     block sm:inline-block global-transition
                     text-white" href="" target="">
                 <div className="flex justify-center items-center">
-                  <span>Join Alpha Today</span>
                   <span className="fa fa-xs fa-arrow-right ml-4"></span>
                 </div>
               </a>

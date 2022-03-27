@@ -1,13 +1,14 @@
 import Left from '../components/left_login'
 import Right from '../components/right_login'
 import { Helmet } from 'react-helmet-async'
-
+import TopBar from '../layout/LP/TopBar'
 const Signin = () => {
   return (
     <>
       <Helmet>
         <title>Login Account</title>
       </Helmet>
+      <TopBar/>
       <div className="w-full h-screen grid place-content-center grid-cols-2  ">
         <aside className="w-full h-screen bg-white ">
           <Left />

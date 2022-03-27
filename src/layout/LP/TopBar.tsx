@@ -108,14 +108,14 @@ const TopBar = () => {
           {store.isAuthenticated === false && (
             <>
               <li>
-                <button className="bg-green hover:bg-hoverGreen  text-white font-bold py-2 px-5 rounded-sm flex items-center justify-center">
+                <Link to="/signin" className="bg-green hover:bg-hoverGreen  text-white border border-green font-bold py-2 px-5 rounded-sm flex items-center justify-center">
                    Sign In
-                </button>
+                </Link>
               </li>
               <li>
-                <button className="bg-transparent  text-black font-semibold  py-2 px-5 border border-black  rounded-sm flex items-center justify-center">
+                <Link to="/signup" className="bg-transparent  text-black font-semibold  py-2 px-5 border border-black  rounded-sm flex items-center justify-center">
                   Sign Up
-                </button>
+                </Link>
               </li>
             </>
           )}
